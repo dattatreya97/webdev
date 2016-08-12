@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Guess the number</title>
+   <script>
+   	function ab() {
+   		//var tr;
+   	var rno;
+   	rno=Math.random()*100;
+   	rno=Math.floor(rno);
+      ans=1;
+      tr=0;
+   	//alert("random number in between 1 and 15 is" + rno)
+   /*	for (var i = 0; i <15; i++) {
+   		var x=parseInt(prompt("Guess"));
+           if(x!=rno)
+           	tr++;
+           else if (x==rno) {
+           	break;
+           }
+           else if (tr==3) {
+           	alert("Sorry the number was" + rno);
+           }
+
+   	}
+   	 alert("you took " + tr + " tries");*/
+   	 while(ans==1)
+   	 {  tr++;
+   	 	x=parseInt(prompt("enter the number"));
+   	 	if(x>rno)
+   	 		alert(" your number is too large");
+   	 	else if(x<rno)
+   	 		alert(" your number is too small");
+   	 	else if (x==rno) {
+   	 		alert("You guessed it right,it took you " + tr + " guesses to get it");
+   	 		ans=0;
+   	 	}
+   	 }
+}
+   </script>
+   </head>
+   <body onload="ab()">
+   </body>
+   </html>
